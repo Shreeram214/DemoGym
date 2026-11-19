@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IronPulse Fitness | Premium Gym in Pune</title>
+  <meta name="description" content="IronPulse Fitness — a premium gym in Pune with modern equipment, certified trainers, personalised programs and 24/7 access. Build your stronger self.">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-mark.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    document.documentElement.classList.add("js");
+    /* Apply theme before first paint: saved choice, else system preference */
+    (function () {
+      var t;
+      try { t = localStorage.getItem("ironpulse-theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") {
+        t = window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      }
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ========== SVG ICON SPRITE ========== -->
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-logo" viewBox="0 0 64 64"><g fill="currentColor"><rect x="4" y="22" width="5" height="20" rx="2"/><rect x="11" y="16" width="6" height="32" rx="2"/><rect x="47" y="16" width="6" height="32" rx="2"/><rect x="55" y="22" width="5" height="20" rx="2"/><rect x="17" y="29" width="30" height="6" rx="2"/></g></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></g></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.3c2.1.7 3.5 2.8 3.5 5.7"/></g></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4v1.5A3.5 3.5 0 0 0 7.5 11M17 6h3v1.5a3.5 3.5 0 0 1-3.5 3.5M12 14v3M8 20h8M9.5 17h5v3h-5z"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></g></symbol>
+    <symbol id="i-dumbbell" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9.5v5M6 7v10M18 7v10M21 9.5v5M6 12h12"/></g></symbol>
+    <symbol id="i-badge" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.8 7 22l5-3 5 3-1.5-8.2"/><path d="m9.8 9 1.5 1.5 3-3"/></g></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></g></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16v4M17 18h4"/></g></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4.5" width="14" height="16.5" rx="2"/><path d="M9 3h6v3H9zM8.5 11h7M8.5 15h4.5"/></g></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 20s-7.5-4.6-9-9.4C2 7.4 4 4.5 7.2 4.5c2 0 3.6 1.1 4.8 2.8 1.2-1.7 2.8-2.8 4.8-2.8 3.2 0 5.2 2.9 4.2 6.1-1.5 4.8-9 9.4-9 9.4z"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 21.5c-4 0-7-2.8-7-6.6 0-4.4 4-6.4 4.6-11.4 3.4 2 5.2 5 5 8.2 1-.6 1.8-1.7 2-3 1.6 1.6 2.4 3.8 2.4 6.2 0 3.8-3 6.6-7 6.6z"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M13 2.5 4.5 13.5H12l-1 8 8.5-11H12z"/></symbol>
+    <symbol id="i-lotus" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 19c-2.5-2-3.5-4.5-3.5-7.2S10 6.6 12 4.5c2 2.1 3.5 4.6 3.5 7.3S14.5 17 12 19z"/><path d="M12 19c-4 0-8-2-9.5-6.5 2.7-.5 5 .1 6.6 1.4M12 19c4 0 8-2 9.5-6.5-2.7-.5-5 .1-6.6 1.4"/></g></symbol>
+    <symbol id="i-person" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="6.5" r="3.5"/><path d="M5 21c0-4.2 3.1-7.5 7-7.5s7 3.3 7 7.5"/></g></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z"/></symbol>
+    <symbol id="i-quote" viewBox="0 0 24 24"><path fill="currentColor" d="M4 11.5C4 7.6 6.3 5 9.5 4.5l.6 1.8C8.2 7 7.2 8.6 7.2 10.5H10V18H4v-6.5zm10 0c0-3.9 2.3-6.5 5.5-7l.6 1.8c-1.9.7-2.9 2.3-2.9 4.2H20V18h-6v-6.5z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.5s-7-6.3-7-12a7 7 0 0 1 14 0c0 5.7-7 12-7 12z"/><circle cx="12" cy="9.5" r="2.6"/></g></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 3.5h3.5l1.8 4.6-2.4 1.5a11 11 0 0 0 6.5 6.5l1.5-2.4 4.6 1.8V19a2 2 0 0 1-2 2C10.4 20.6 3.4 13.6 3 5.5a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></g></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 9a5.5 5.5 0 0 1 8 0M12 9.5l1.5-2"/></g></symbol>
+    <symbol id="i-chevron-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m6 15 6-6 6 6"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.1"/></g></symbol>
+    <!-- social -->
+    <symbol id="s-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></g></symbol>
+    <symbol id="s-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.5H16l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"/></symbol>
+    <symbol id="s-youtube" viewBox="0 0 24 24"><path fill="currentColor" d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3z"/></symbol>
+    <symbol id="s-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M5 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3.3 9h3.4v11.5H3.3zM9 9h3.3v1.6c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.4v6.4h-3.4v-5.7c0-1.4 0-3.1-1.9-3.1s-2.2 1.5-2.2 3v5.8H9z"/></symbol>
+    <symbol id="s-x" viewBox="0 0 24 24"><path fill="currentColor" d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L1.8 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.3 4.7H5.5z"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#home" class="logo" aria-label="IronPulse Fitness home">
+        <svg class="logo__mark" aria-hidden="true"><use href="#i-logo"/></svg>
+        <span class="logo__text">IRON<span>PULSE</span><small>Fitness</small></span>
+      </a>
+
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a href="#home" class="nav__link is-active">Home</a></li>
+          <li><a href="#programs" class="nav__link">Programs</a></li>
+          <li><a href="#trainers" class="nav__link">Trainers</a></li>
+          <li><a href="#membership" class="nav__link">Membership</a></li>
+          <li><a href="#testimonials" class="nav__link">Reviews</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+        <a href="#membership" class="btn btn--primary nav__cta-mobile">Get Started <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="#membership" class="btn btn--primary btn--sm navbar__cta">Get Started <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch theme">
+          <svg class="i-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+          <svg class="i-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__content">
+        <p class="eyebrow reveal">Welcome to IronPulse Fitness</p>
+        <h1 class="hero__title reveal" id="hero-title">
+          Build your<br><em>stronger</em> self.
+        </h1>
+        <p class="hero__lead reveal">Train harder. Live healthier. Pune's premium fitness club — elite equipment, certified coaches and programs built around your goals, open around the clock.</p>
+        <div class="hero__actions reveal">
+          <a href="#membership" class="btn btn--primary btn--lg">Start Your Journey <svg class="icon"><use href="#i-arrow"/></svg></a>
+          <a href="#programs" class="btn btn--ghost btn--lg"><svg class="icon"><use href="#i-play"/></svg> Explore Programs</a>
+        </div>
+
+        <ul class="hero__stats reveal" aria-label="IronPulse at a glance">
+          <li class="stat">
+            <svg class="stat__icon" aria-hidden="true"><use href="#i-users"/></svg>
+            <div><strong><span class="counter" data-target="500">500</span>+</strong><span>Active Members</span></div>
+          </li>
+          <li class="stat">
+            <svg class="stat__icon" aria-hidden="true"><use href="#i-trophy"/></svg>
+            <div><strong><span class="counter" data-target="15">15</span>+</strong><span>Expert Trainers</span></div>
+          </li>
+          <li class="stat">
+            <svg class="stat__icon" aria-hidden="true"><use href="#i-clock"/></svg>
+            <div><strong>24/7</strong><span>Gym Access</span></div>
+          </li>
+        </ul>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll to About section"><span></span></a>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <div class="about__media reveal">
+          <div class="media media--tall">
+            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1000&q=75" alt="Rows of dumbbells and benches on the IronPulse gym floor" loading="lazy" width="1000" height="1200">
+          </div>
+          <div class="about__badge">
+            <strong>8+</strong>
+            <span>Years building<br>stronger bodies</span>
+          </div>
+        </div>
+
+        <div class="about__content">
+          <p class="eyebrow reveal">About IronPulse</p>
+          <h2 class="section-title reveal" id="about-title">More than a gym. <span class="text-accent">A community.</span></h2>
+          <p class="section-lead reveal">Founded in Pune in 2017, IronPulse Fitness was built for people who take their training seriously — and for those just getting started. Across 12,000 sq. ft. we combine world-class equipment, expert coaching and a supportive community to help you reach your health and wellness goals.</p>
+
+          <ul class="feature-list reveal">
+            <li><span class="feature-list__icon"><svg><use href="#i-dumbbell"/></svg></span><div><h3>Modern Equipment</h3><p>Hammer Strength, Rogue racks and the latest cardio machines.</p></div></li>
+            <li><span class="feature-list__icon"><svg><use href="#i-badge"/></svg></span><div><h3>Certified Trainers</h3><p>ACE, NASM and ACSM-certified coaches on the floor daily.</p></div></li>
+            <li><span class="feature-list__icon"><svg><use href="#i-target"/></svg></span><div><h3>Personalized Training</h3><p>Programs tailored to your body, schedule and goals.</p></div></li>
+            <li><span class="feature-list__icon"><svg><use href="#i-calendar"/></svg></span><div><h3>Flexible Membership</h3><p>Monthly or annual plans — upgrade or pause anytime.</p></div></li>
+          </ul>
+
+          <a href="#programs" class="btn btn--outline reveal">Discover Our Programs <svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROGRAMS ========== -->
+    <section class="section section--alt programs" id="programs" aria-labelledby="programs-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal">What we offer</p>
+            <h2 class="section-title reveal" id="programs-title">Our Fitness <span class="text-accent">Programs</span></h2>
+          </div>
+          <p class="section-lead reveal">Whether you want to build muscle, burn fat or move better, our programs are designed to get you there faster — and safely.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="program-card reveal">
+            <div class="media program-card__media">
+              <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=75" alt="Athlete performing a heavy barbell lift" loading="lazy" width="800" height="600">
+              <span class="program-card__icon"><svg><use href="#i-dumbbell"/></svg></span>
+            </div>
+            <div class="program-card__body">
+              <h3>Strength Training</h3>
+              <p>Build raw power and lean muscle with progressive overload programs on compound lifts.</p>
+              <a href="#contact" class="link-arrow" data-program="Strength Training">Explore Program <svg class="icon"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+
+          <article class="program-card reveal">
+            <div class="media program-card__media">
+              <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=75" alt="Personal trainer guiding a client through an exercise" loading="lazy" width="800" height="600">
+              <span class="program-card__icon"><svg><use href="#i-person"/></svg></span>
+            </div>
+            <div class="program-card__body">
+              <h3>Personal Training</h3>
+              <p>One-on-one coaching with a dedicated trainer, structured plans and weekly check-ins.</p>
+              <a href="#contact" class="link-arrow" data-program="Personal Training">Explore Program <svg class="icon"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+
+          <article class="program-card reveal">
+            <div class="media program-card__media">
+              <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=800&q=75" alt="Athlete during a high-intensity CrossFit workout" loading="lazy" width="800" height="600">
+              <span class="program-card__icon"><svg><use href="#i-bolt"/></svg></span>
+            </div>
+            <div class="program-card__body">
+              <h3>CrossFit</h3>
+              <p>High-intensity functional workouts that build strength, stamina and real-world fitness.</p>
+              <a href="#contact" class="link-arrow" data-program="CrossFit">Explore Program <svg class="icon"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+
+          <article class="program-card reveal">
+            <div class="media program-card__media">
+              <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=75" alt="Woman training with dumbbells for weight loss" loading="lazy" width="800" height="600">
+              <span class="program-card__icon"><svg><use href="#i-flame"/></svg></span>
+            </div>
+            <div class="program-card__body">
+              <h3>Weight Loss</h3>
+              <p>Science-backed fat-loss training paired with nutrition guidance for sustainable results.</p>
+              <a href="#contact" class="link-arrow" data-program="Weight Loss">Explore Program <svg class="icon"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+
+          <article class="program-card reveal">
+            <div class="media program-card__media">
+              <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=800&q=75" alt="Cardio conditioning session in the gym" loading="lazy" width="800" height="600">
+              <span class="program-card__icon"><svg><use href="#i-heart"/></svg></span>
+            </div>
+            <div class="program-card__body">
+              <h3>Cardio &amp; Conditioning</h3>
+              <p>Boost endurance and heart health with intervals, circuits and metabolic conditioning.</p>
+              <a href="#contact" class="link-arrow" data-program="Cardio & Conditioning">Explore Program <svg class="icon"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+
+          <article class="program-card reveal">
+            <div class="media program-card__media">
+              <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=75" alt="Person practising a yoga pose on a mat" loading="lazy" width="800" height="600">
+              <span class="program-card__icon"><svg><use href="#i-lotus"/></svg></span>
+            </div>
+            <div class="program-card__body">
+              <h3>Yoga &amp; Mobility</h3>
+              <p>Improve flexibility, posture and recovery with guided yoga and mobility sessions.</p>
+              <a href="#contact" class="link-arrow" data-program="Yoga & Mobility">Explore Program <svg class="icon"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TRAINERS ========== -->
+    <section class="section trainers" id="trainers" aria-labelledby="trainers-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal">Meet the team</p>
+            <h2 class="section-title reveal" id="trainers-title">Our Expert <span class="text-accent">Trainers</span></h2>
+          </div>
+          <p class="section-lead reveal">Learn from the best in the industry. Our coaches bring years of experience, international certifications and a passion for results.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="trainer-card reveal">
+            <div class="media trainer-card__media">
+              <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=700&q=75" alt="Portrait of trainer Rohit Sharma" loading="lazy" width="700" height="840">
+              <ul class="trainer-card__social" aria-label="Rohit Sharma on social media">
+                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#s-instagram"/></svg></a></li>
+                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#s-facebook"/></svg></a></li>
+                <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#s-linkedin"/></svg></a></li>
+              </ul>
+            </div>
+            <div class="trainer-card__body">
+              <div>
+                <h3>Rohit Sharma</h3>
+                <p class="trainer-card__role">Strength &amp; Powerlifting Coach</p>
+              </div>
+              <span class="pill">8+ yrs</span>
+            </div>
+          </article>
+
+          <article class="trainer-card reveal">
+            <div class="media trainer-card__media">
+              <img src="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?auto=format&fit=crop&w=700&q=75" alt="Portrait of trainer Priya Nair" loading="lazy" width="700" height="840">
+              <ul class="trainer-card__social" aria-label="Priya Nair on social media">
+                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#s-instagram"/></svg></a></li>
+                <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg><use href="#s-youtube"/></svg></a></li>
+                <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#s-linkedin"/></svg></a></li>
+              </ul>
+            </div>
+            <div class="trainer-card__body">
+              <div>
+                <h3>Priya Nair</h3>
+                <p class="trainer-card__role">Fitness &amp; Yoga Coach</p>
+              </div>
+              <span class="pill">6+ yrs</span>
+            </div>
+          </article>
+
+          <article class="trainer-card reveal">
+            <div class="media trainer-card__media">
+              <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=700&q=75" alt="Portrait of trainer Amit Desai" loading="lazy" width="700" height="840">
+              <ul class="trainer-card__social" aria-label="Amit Desai on social media">
+                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#s-instagram"/></svg></a></li>
+                <li><a href="https://x.com/" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg><use href="#s-x"/></svg></a></li>
+                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#s-facebook"/></svg></a></li>
+              </ul>
+            </div>
+            <div class="trainer-card__body">
+              <div>
+                <h3>Amit Desai</h3>
+                <p class="trainer-card__role">CrossFit &amp; Conditioning Coach</p>
+              </div>
+              <span class="pill">7+ yrs</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MEMBERSHIP ========== -->
+    <section class="section section--alt membership" id="membership" aria-labelledby="membership-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow reveal">Membership plans</p>
+          <h2 class="section-title reveal" id="membership-title">Choose the plan that <span class="text-accent">fits you</span></h2>
+          <p class="section-lead reveal">No joining fee this month. Cancel or upgrade anytime.</p>
+
+          <div class="billing-toggle reveal" role="group" aria-label="Billing period">
+            <button type="button" class="billing-toggle__btn is-active" data-billing="monthly" aria-pressed="true">Monthly</button>
+            <button type="button" class="billing-toggle__btn" data-billing="yearly" aria-pressed="false">Yearly <span class="billing-toggle__save">Save 20%</span></button>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card reveal" data-plan="Basic">
+            <h3 class="price-card__name">Basic</h3>
+            <p class="price-card__desc">Everything you need to start training.</p>
+            <p class="price-card__price">
+              <span class="price-card__amount" data-monthly="999">₹999</span>
+              <span class="price-card__period">/month</span>
+            </p>
+            <p class="price-card__note" aria-live="polite">Billed monthly</p>
+            <ul class="check-list">
+              <li><svg><use href="#i-check"/></svg>Gym access</li>
+              <li><svg><use href="#i-check"/></svg>Basic equipment</li>
+              <li><svg><use href="#i-check"/></svg>Locker access</li>
+            </ul>
+            <button type="button" class="btn btn--outline btn--block plan-btn">Choose Basic</button>
+          </article>
+
+          <article class="price-card price-card--featured reveal" data-plan="Pro">
+            <span class="price-card__badge">Most Popular</span>
+            <h3 class="price-card__name">Pro</h3>
+            <p class="price-card__desc">Our members' favourite for real progress.</p>
+            <p class="price-card__price">
+              <span class="price-card__amount" data-monthly="1999">₹1,999</span>
+              <span class="price-card__period">/month</span>
+            </p>
+            <p class="price-card__note" aria-live="polite">Billed monthly</p>
+            <ul class="check-list">
+              <li><svg><use href="#i-check"/></svg>All Basic features</li>
+              <li><svg><use href="#i-check"/></svg>Group classes</li>
+              <li><svg><use href="#i-check"/></svg>Fitness assessment</li>
+              <li><svg><use href="#i-check"/></svg>Personal workout plan</li>
+            </ul>
+            <button type="button" class="btn btn--primary btn--block plan-btn">Choose Pro</button>
+          </article>
+
+          <article class="price-card reveal" data-plan="Elite">
+            <h3 class="price-card__name">Elite</h3>
+            <p class="price-card__desc">The complete, fully-coached experience.</p>
+            <p class="price-card__price">
+              <span class="price-card__amount" data-monthly="3499">₹3,499</span>
+              <span class="price-card__period">/month</span>
+            </p>
+            <p class="price-card__note" aria-live="polite">Billed monthly</p>
+            <ul class="check-list">
+              <li><svg><use href="#i-check"/></svg>All Pro features</li>
+              <li><svg><use href="#i-check"/></svg>Personal trainer sessions</li>
+              <li><svg><use href="#i-check"/></svg>Nutrition consultation</li>
+              <li><svg><use href="#i-check"/></svg>Priority access</li>
+            </ul>
+            <button type="button" class="btn btn--outline btn--block plan-btn">Choose Elite</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WHY CHOOSE US ========== -->
+    <section class="section why" id="why" aria-labelledby="why-title">
+      <div class="why__bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow reveal">Why IronPulse</p>
+          <h2 class="section-title reveal" id="why-title">Why <span class="text-accent">choose us?</span></h2>
+          <p class="section-lead reveal">Your fitness is our priority. Here's what sets us apart.</p>
+        </div>
+
+        <div class="grid grid--3 why__grid">
+          <div class="why-card reveal"><span class="why-card__icon"><svg><use href="#i-dumbbell"/></svg></span><h3>Premium Equipment</h3><p>Commercial-grade machines, free weights and turf zones maintained daily.</p></div>
+          <div class="why-card reveal"><span class="why-card__icon"><svg><use href="#i-badge"/></svg></span><h3>Certified Professionals</h3><p>Internationally certified coaches who know how to get results safely.</p></div>
+          <div class="why-card reveal"><span class="why-card__icon"><svg><use href="#i-clock"/></svg></span><h3>Flexible Timings</h3><p>Open 24/7 with staffed hours from 6 AM to 12 AM, every day of the week.</p></div>
+          <div class="why-card reveal"><span class="why-card__icon"><svg><use href="#i-sparkle"/></svg></span><h3>Clean &amp; Hygienic</h3><p>Hourly sanitisation, fresh towels and spotless locker rooms and showers.</p></div>
+          <div class="why-card reveal"><span class="why-card__icon"><svg><use href="#i-clipboard"/></svg></span><h3>Customized Workout Plans</h3><p>Personal programs built from your assessment and adjusted as you progress.</p></div>
+          <div class="why-card reveal"><span class="why-card__icon"><svg><use href="#i-users"/></svg></span><h3>Community &amp; Motivation</h3><p>Challenges, group classes and events that keep you showing up.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="section section--alt testimonials" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow reveal">Testimonials</p>
+          <h2 class="section-title reveal" id="testimonials-title">Real members. <span class="text-accent">Real results.</span></h2>
+        </div>
+
+        <div class="grid grid--3">
+          <figure class="testimonial reveal">
+            <svg class="testimonial__quote" aria-hidden="true"><use href="#i-quote"/></svg>
+            <div class="rating" role="img" aria-label="Rated 5 out of 5">
+              <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+            </div>
+            <blockquote>IronPulse has completely transformed my fitness journey. I lost 14 kg in six months and the trainers kept me motivated every single week. Best decision I've made.</blockquote>
+            <figcaption class="testimonial__author">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&h=160&q=75" alt="" loading="lazy" width="56" height="56">
+              <div><strong>Sneha Patil</strong><span>Pro Member · 1 year</span></div>
+            </figcaption>
+          </figure>
+
+          <figure class="testimonial reveal">
+            <svg class="testimonial__quote" aria-hidden="true"><use href="#i-quote"/></svg>
+            <div class="rating" role="img" aria-label="Rated 5 out of 5">
+              <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+            </div>
+            <blockquote>The equipment is top-notch and never crowded thanks to 24/7 access. Rohit's strength program added 40 kg to my deadlift. The community here is unmatched.</blockquote>
+            <figcaption class="testimonial__author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&h=160&q=75" alt="" loading="lazy" width="56" height="56">
+              <div><strong>Karan Mehta</strong><span>Elite Member · 2 years</span></div>
+            </figcaption>
+          </figure>
+
+          <figure class="testimonial reveal">
+            <svg class="testimonial__quote" aria-hidden="true"><use href="#i-quote"/></svg>
+            <div class="rating" role="img" aria-label="Rated 4.5 out of 5">
+              <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg class="is-half"><use href="#i-star"/></svg>
+            </div>
+            <blockquote>As a beginner I was nervous, but the staff made me feel at home from day one. The yoga and mobility classes fixed my back pain. Clean, friendly and professional.</blockquote>
+            <figcaption class="testimonial__author">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&h=160&q=75" alt="" loading="lazy" width="56" height="56">
+              <div><strong>Arjun Kulkarni</strong><span>Basic Member · 8 months</span></div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== BMI CALCULATOR ========== -->
+    <section class="section bmi" id="bmi" aria-labelledby="bmi-title">
+      <div class="container bmi__grid">
+        <div class="bmi__intro">
+          <p class="eyebrow reveal">Know your numbers</p>
+          <h2 class="section-title reveal" id="bmi-title">BMI <span class="text-accent">Calculator</span></h2>
+          <p class="section-lead reveal">Body Mass Index is a quick way to check whether your weight is in a healthy range for your height. Use it as a starting point — our trainers will help with the rest.</p>
+
+          <table class="bmi-table reveal">
+            <caption class="sr-only">BMI categories</caption>
+            <thead><tr><th scope="col">BMI</th><th scope="col">Category</th></tr></thead>
+            <tbody>
+              <tr data-cat="underweight"><td>Below 18.5</td><td>Underweight</td></tr>
+              <tr data-cat="normal"><td>18.5 – 24.9</td><td>Normal weight</td></tr>
+              <tr data-cat="overweight"><td>25 – 29.9</td><td>Overweight</td></tr>
+              <tr data-cat="obese"><td>30 and above</td><td>Obese</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card bmi__card reveal">
+          <form id="bmi-form" class="form" novalidate>
+            <div class="form__row">
+              <div class="field">
+                <label for="bmi-height">Height (cm)</label>
+                <input type="number" id="bmi-height" name="height" inputmode="decimal" placeholder="e.g. 170" min="50" max="272" step="0.1" aria-describedby="bmi-height-error">
+                <p class="field__error" id="bmi-height-error" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="bmi-weight">Weight (kg)</label>
+                <input type="number" id="bmi-weight" name="weight" inputmode="decimal" placeholder="e.g. 65" min="10" max="350" step="0.1" aria-describedby="bmi-weight-error">
+                <p class="field__error" id="bmi-weight-error" aria-live="polite"></p>
+              </div>
+            </div>
+            <div class="form__actions">
+              <button type="submit" class="btn btn--primary btn--block">Calculate BMI <svg class="icon"><use href="#i-scale"/></svg></button>
+              <button type="reset" class="btn btn--ghost">Reset</button>
+            </div>
+          </form>
+
+          <div class="bmi-result" id="bmi-result" aria-live="polite">
+            <div class="bmi-result__empty">
+              <svg aria-hidden="true"><use href="#i-scale"/></svg>
+              <p>Enter your height and weight to see your BMI.</p>
+            </div>
+            <div class="bmi-result__value" hidden>
+              <p class="bmi-result__label">Your BMI is</p>
+              <p class="bmi-result__number" id="bmi-number">0.0</p>
+              <span class="bmi-result__category" id="bmi-category">—</span>
+              <div class="bmi-gauge" aria-hidden="true">
+                <div class="bmi-gauge__bar"></div>
+                <span class="bmi-gauge__marker" id="bmi-marker"></span>
+                <div class="bmi-gauge__labels"><span>15</span><span>18.5</span><span>25</span><span>30</span><span>40</span></div>
+              </div>
+              <p class="bmi-result__tip" id="bmi-tip"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section section--alt contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow reveal">Get in touch</p>
+          <h2 class="section-title reveal" id="contact-title">Contact <span class="text-accent">Us</span></h2>
+          <p class="section-lead reveal">Book a free trial session, ask about memberships or just say hello. We usually reply within a few hours.</p>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__info reveal">
+            <ul class="info-list">
+              <li><span class="info-list__icon"><svg><use href="#i-pin"/></svg></span><div><h3>Address</h3><p>123 Fitness Street, Koregaon Park,<br>Pune, Maharashtra 411001</p></div></li>
+              <li><span class="info-list__icon"><svg><use href="#i-phone"/></svg></span><div><h3>Phone</h3><p><a href="tel:+919876543210">+91 98765 43210</a></p></div></li>
+              <li><span class="info-list__icon"><svg><use href="#i-mail"/></svg></span><div><h3>Email</h3><p><a href="mailto:info@ironpulse.fit">info@ironpulse.fit</a></p></div></li>
+              <li><span class="info-list__icon"><svg><use href="#i-clock"/></svg></span><div><h3>Opening Hours</h3><p>Gym floor: 24/7 for members<br>Staffed: Mon – Sun, 6 AM – 12 AM</p></div></li>
+            </ul>
+
+            <div class="map">
+              <img src="assets/images/map-placeholder.svg" alt="Map showing IronPulse Fitness location in Koregaon Park, Pune">
+              <a class="map__link btn btn--sm btn--dark" href="https://www.google.com/maps/search/?api=1&query=Koregaon+Park+Pune" target="_blank" rel="noopener"><svg class="icon"><use href="#i-pin"/></svg> Open in Google Maps</a>
+            </div>
+          </div>
+
+          <div class="card contact__form-card reveal">
+            <h3 class="contact__form-title">Send us a message</h3>
+            <form id="contact-form" class="form" novalidate>
+              <div class="form__row">
+                <div class="field">
+                  <label for="c-name">Full name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="c-name" name="name" autocomplete="name" placeholder="Your name" required aria-describedby="c-name-error">
+                  <p class="field__error" id="c-name-error" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label for="c-email">Email <span aria-hidden="true">*</span></label>
+                  <input type="email" id="c-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="c-email-error">
+                  <p class="field__error" id="c-email-error" aria-live="polite"></p>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="field">
+                  <label for="c-phone">Phone <span aria-hidden="true">*</span></label>
+                  <input type="tel" id="c-phone" name="phone" autocomplete="tel" placeholder="+91 98765 43210" required aria-describedby="c-phone-error">
+                  <p class="field__error" id="c-phone-error" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label for="c-interest">Interested in</label>
+                  <select id="c-interest" name="interest">
+                    <option value="">General enquiry</option>
+                    <optgroup label="Membership">
+                      <option value="Basic Plan">Basic Plan</option>
+                      <option value="Pro Plan">Pro Plan</option>
+                      <option value="Elite Plan">Elite Plan</option>
+                    </optgroup>
+                    <optgroup label="Programs">
+                      <option value="Strength Training">Strength Training</option>
+                      <option value="Personal Training">Personal Training</option>
+                      <option value="CrossFit">CrossFit</option>
+                      <option value="Weight Loss">Weight Loss</option>
+                      <option value="Cardio & Conditioning">Cardio &amp; Conditioning</option>
+                      <option value="Yoga & Mobility">Yoga &amp; Mobility</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="c-message">Message <span aria-hidden="true">*</span></label>
+                <textarea id="c-message" name="message" rows="5" placeholder="Tell us about your goals…" required aria-describedby="c-message-error"></textarea>
+                <p class="field__error" id="c-message-error" aria-live="polite"></p>
+              </div>
+              <button type="submit" class="btn btn--primary btn--block" id="contact-submit">
+                <span class="btn__label">Send Message</span>
+                <svg class="icon btn__icon"><use href="#i-arrow"/></svg>
+                <span class="spinner" aria-hidden="true"></span>
+              </button>
+              <p class="form__note">This is a demo form. No message is actually sent.</p>
+            </form>
+
+            <div class="form-success" id="form-success" role="status" hidden>
+              <span class="form-success__icon"><svg><use href="#i-check"/></svg></span>
+              <h3>Message sent successfully!</h3>
+              <p id="form-success-text">Thanks for reaching out. A member of our team will get back to you within 24 hours.</p>
+              <button type="button" class="btn btn--outline" id="form-reset">Send another message</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTA BAND ========== -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container cta-band__inner reveal">
+        <div>
+          <h2 id="cta-title">Your first session is <em>on us.</em></h2>
+          <p>Claim a free 1-day pass and a fitness assessment with one of our coaches.</p>
+        </div>
+        <a href="#contact" class="btn btn--dark btn--lg" data-program="Free Trial Pass">Claim Free Pass <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#home" class="logo" aria-label="IronPulse Fitness home">
+          <svg class="logo__mark" aria-hidden="true"><use href="#i-logo"/></svg>
+          <span class="logo__text">IRON<span>PULSE</span><small>Fitness</small></span>
+        </a>
+        <p>Premium strength and conditioning club in the heart of Pune. Train harder. Live healthier.</p>
+        <ul class="social" aria-label="IronPulse on social media">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#s-instagram"/></svg></a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#s-facebook"/></svg></a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg><use href="#s-youtube"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#s-linkedin"/></svg></a></li>
+        </ul>
+      </div>
+
+      <nav class="footer__col" aria-label="Footer quick links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#trainers">Trainers</a></li>
+          <li><a href="#membership">Membership</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Footer programs">
+        <h3>Programs</h3>
+        <ul>
+          <li><a href="#programs">Strength Training</a></li>
+          <li><a href="#programs">Personal Training</a></li>
+          <li><a href="#programs">CrossFit</a></li>
+          <li><a href="#programs">Weight Loss</a></li>
+          <li><a href="#bmi">BMI Calculator</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col">
+        <h3>Contact</h3>
+        <ul class="footer__contact">
+          <li><svg><use href="#i-pin"/></svg>123 Fitness Street, Pune 411001</li>
+          <li><svg><use href="#i-phone"/></svg><a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><svg><use href="#i-mail"/></svg><a href="mailto:info@ironpulse.fit">info@ironpulse.fit</a></li>
+          <li><svg><use href="#i-clock"/></svg>Mon – Sun: 6 AM – 12 AM</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>&copy; <span id="year">2026</span> IronPulse Fitness. All rights reserved.</p>
+      <p>Images courtesy of <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>.</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="to-top" type="button" aria-label="Back to top"><svg><use href="#i-chevron-up"/></svg></button>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <svg class="toast__icon" aria-hidden="true"><use href="#i-check"/></svg>
+    <span id="toast-text"></span>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

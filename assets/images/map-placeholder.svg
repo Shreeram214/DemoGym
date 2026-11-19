@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+  <rect width="800" height="500" fill="#141414"/>
+  <g stroke="#232323" stroke-width="1">
+    <path d="M0 50H800M0 100H800M0 150H800M0 200H800M0 250H800M0 300H800M0 350H800M0 400H800M0 450H800"/>
+    <path d="M50 0V500M100 0V500M150 0V500M200 0V500M250 0V500M300 0V500M350 0V500M400 0V500M450 0V500M500 0V500M550 0V500M600 0V500M650 0V500M700 0V500M750 0V500"/>
+  </g>
+  <rect x="470" y="40" width="210" height="130" rx="10" fill="#18241a"/>
+  <rect x="80" y="330" width="170" height="110" rx="10" fill="#18241a"/>
+  <path d="M600 500C560 420 640 360 800 340V500Z" fill="#14202a"/>
+  <g stroke="#2e2e2e" stroke-width="22" stroke-linecap="round" fill="none">
+    <path d="M-20 260C200 240 300 300 420 250S650 180 820 210"/>
+    <path d="M330 -20C350 120 300 260 360 520"/>
+    <path d="M-20 120L820 420"/>
+  </g>
+  <g stroke="#3b3b3b" stroke-width="10" stroke-linecap="round" fill="none">
+    <path d="M140 -20L220 520"/>
+    <path d="M560 -20C540 160 600 300 520 520"/>
+    <path d="M-20 400C150 380 260 420 400 380"/>
+  </g>
+  <circle cx="400" cy="238" r="70" fill="#b6ff2e" fill-opacity=".08"/>
+  <circle cx="400" cy="238" r="38" fill="#b6ff2e" fill-opacity=".14"/>
+  <path d="M400 180c-22 0-38 16-38 37 0 28 38 66 38 66s38-38 38-66c0-21-16-37-38-37z" fill="#b6ff2e"/>
+  <circle cx="400" cy="217" r="13" fill="#0b0b0b"/>
+</svg>

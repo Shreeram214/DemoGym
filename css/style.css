@@ -284,13 +284,21 @@ button { cursor: pointer; background: none; border: 0; }
   transition: background-color var(--t), box-shadow var(--t), border-color var(--t);
   border-bottom: 1px solid transparent;
 }
-.navbar.is-scrolled {
+/* The blurred background lives on a pseudo-element: a backdrop-filter on
+   .navbar itself would make it the containing block for the fixed mobile
+   .nav panel, squashing the open menu to the navbar's height. */
+.navbar::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
   background: rgba(10, 10, 10, 0.85);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom-color: var(--border);
   box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity var(--t);
+  pointer-events: none;
 }
+.navbar.is-scrolled { border-bottom-color: var(--border); }
+.navbar.is-scrolled::before { opacity: 1; }
 .navbar__inner {
   height: 100%;
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
@@ -1020,7 +1028,7 @@ input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
     linear-gradient(135deg, #e6e9e1, #d4d9cd);
 }
 
-:root[data-theme="light"] .navbar.is-scrolled {
+:root[data-theme="light"] .navbar::before {
   background: rgba(246, 247, 244, 0.88);
   box-shadow: 0 10px 30px -18px rgba(0, 0, 0, 0.25);
 }

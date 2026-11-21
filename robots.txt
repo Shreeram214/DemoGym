@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ironpulsedemo.pages.dev/sitemap.xml

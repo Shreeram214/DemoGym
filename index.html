@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IronPulse Fitness | Premium Gym in Pune</title>
   <meta name="description" content="IronPulse Fitness — a premium gym in Pune with modern equipment, certified trainers, personalised programs and 24/7 access. Build your stronger self.">
-  <meta name="theme-color" content="#0a0a0a">
+  <meta name="theme-color" content="#f6f7f4">
   <link rel="icon" type="image/svg+xml" href="assets/images/logo-mark.svg">
   <link rel="canonical" href="https://ironpulsedemo.pages.dev/">
 
@@ -33,13 +33,11 @@
   <link rel="stylesheet" href="css/style.css?v=2">
   <script>
     document.documentElement.classList.add("js");
-    /* Apply theme before first paint: saved choice, else system preference */
+    /* Apply theme before first paint: the visitor's saved choice, else light */
     (function () {
       var t;
       try { t = localStorage.getItem("ironpulse-theme"); } catch (e) {}
-      if (t !== "light" && t !== "dark") {
-        t = window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-      }
+      if (t !== "dark") t = "light";
       document.documentElement.setAttribute("data-theme", t);
     })();
   </script>
@@ -704,6 +702,6 @@
     <span id="toast-text"></span>
   </div>
 
-  <script src="js/script.js?v=2"></script>
+  <script src="js/script.js?v=3"></script>
 </body>
 </html>

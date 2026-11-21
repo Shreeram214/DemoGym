@@ -26,7 +26,8 @@
       themeToggle.setAttribute("title", `Switch to ${next} mode`);
     }
   }
-  applyTheme(root.getAttribute("data-theme") === "light" ? "light" : "dark");
+  // Light is the default; dark only when the visitor chose it with the toggle
+  applyTheme(root.getAttribute("data-theme") === "dark" ? "dark" : "light");
 
   if (themeToggle) {
     themeToggle.addEventListener("click", () => {
@@ -39,15 +40,6 @@
       try { localStorage.setItem(THEME_KEY, next); } catch (e) { /* storage blocked */ }
     });
   }
-
-  // Follow OS changes unless the visitor picked a theme themselves
-  const lightQuery = window.matchMedia("(prefers-color-scheme: light)");
-  const onSystemChange = (e) => {
-    let saved = null;
-    try { saved = localStorage.getItem(THEME_KEY); } catch (err) { /* ignore */ }
-    if (!saved) applyTheme(e.matches ? "light" : "dark");
-  };
-  if (lightQuery.addEventListener) lightQuery.addEventListener("change", onSystemChange);
 
   /* ---------- Footer year ---------- */
   const yearEl = $("#year");
